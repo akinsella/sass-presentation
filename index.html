@@ -2,12 +2,12 @@
 <html lang="en-US" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
       xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
-	<title>Shower Presentation Template</title>
+	<title>Deep dive into CSS Preprocessors</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=1274, user-scalable=no">
 	<link rel="stylesheet" href="themes/ribbon/styles/style.css">
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/lib/jquery/jquery-1.7.2.min.js"></script>
 
 <!--
     <link rel="stylesheet" href="http://yandex.st/highlightjs/6.0/styles/sunburst.css">
@@ -150,7 +150,7 @@
    				<h2>Les variables </h2>
    			</header>
                <em>Attention:</em> Les variables sont des constantes
-               <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 12px;">
+               <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
    $my_blue: #4e6cb0; // Sass
    @my_blue: #4e6cb0; // Less
      my_blue = #4e6cb0; // Stylus
@@ -171,7 +171,7 @@
    				<h2>Les types de variables</h2>
    			</header>
                <em>Les variables ne sont pas que des couleurs</em>
-               <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 12px;">
+               <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
    $fonts: Helvetica, Arial, sans-serif;
    $image_path: "../img/";
    $font-size: 1.5em;
@@ -188,12 +188,12 @@
    				<h2>Opérations et fonctions de couleur</h2>
    			</header>
                <em>Maths et opérations sur les couleurs</em>
-               <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 12px;">
+               <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
    width: 25px * 4 + 100px / 2 - 50px; /* 100px */
    color: #990033 + #666666; /* #FF66CC */
                </code></pre>
                <em>Fonction sur les couleurs</em>
-               <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 12px;">
+               <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
    $light_blue: lighten($my_blue, 20%);
    $flashy_blue: saturate($my_blue, 50%);
                </code></pre>
@@ -208,7 +208,7 @@
    			</header>
                <em>Les fonctions telles que lighten() retourne une valeur.</em>
                <em>Les Mixins ne retournent rien mais génèrent du CSS</em>
-               <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 12px;">
+               <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
    @mixin border-radius($radius: 10px) {
         -webkit-border-radius: $radius;
            -moz-border-radius: $radius;
@@ -233,7 +233,7 @@
                <table style="width: 100%">
                    <tr>
                        <td style="padding: 30px; width: 50%;">
-                           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 12px;">
+                           <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
     .pop {
         .pop-btn {
 
@@ -247,7 +247,7 @@
                            </code></pre>
                        </td>
                        <td style="padding: 30px; width: 50%;">
-                           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 12px;">
+                           <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
      .link {
          &:hover {
 
@@ -272,13 +272,13 @@
    				<h2>Imports et minification</h2>
    			</header>
                <em>Les imports fonctionnent sans coût sur les performances</em>
-               <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 12px;">
+               <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
    @import "colors";
    @import "typography";
    @import "layout";
                </code></pre>
                <em>Le CSS généré peut être clair ou bien minifié</em>
-               <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 12px;">
+               <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
    #main{color:#fff;background-color:#000}#main
    p{width:10px}.huge{font-size:10em;font-weight:bold;text-decoration:underline}
                </code></pre>
@@ -471,7 +471,7 @@
                    <p>Chris Eppstein - <a href="http://twitter.com/hcatlin">@chriseppstein</a> (Sass Core)</p>
                    <p>CSS3, Sprite, Grids, Typography, Data-URLs, Cross-Browser, assets path, ton of helpers</p>
                </div>
-               <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 12px;">
+               <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
     @import "compass/css3/border-radius";
 
     .button {
@@ -509,14 +509,14 @@
    				<h2>Installation et exécution</h2>
    			</header>
                <em>Juste Sass : </em>
-               <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 12px;">
+               <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
 > gem install sass
 > sass --watch &lt;path&gt;
                </code></pre>
 
 
                <em>Sass + Compass : </em>
-               <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 12px;">
+               <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
 > gem install compass
 > compass create &lt;path&gt;
 > compass watch
@@ -539,7 +539,7 @@
    	</div></div>
 
 
-    <div class="slide" id="css-misconceptions-gui-compilers"><div>
+    <div class="slide" id="css-proprecessor-gui-compilers"><div>
    		<section>
    			<header>
    				<h2>Gui Compilers</h2>
@@ -551,7 +551,7 @@
    	</div></div>
 
 
-    <div class="slide" id="css-misconceptions-syntax-highlighting"><div>
+    <div class="slide" id="css-proprecessor-syntax-highlighting"><div>
    		<section>
    			<header>
    				<h2>Syntax Highligthing</h2>
@@ -572,10 +572,10 @@
         </section>
    	</div></div>
 
-    <div class="slide" id="css-misconceptions-debugging"><div>
+    <div class="slide" id="css-preprocessor-debugging"><div>
    		<section>
            <em>Debug mode</em>
-           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 12px;">
+           <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
 > sass --watch &lt;path&gt; --debug-info
            </code></pre>
            <br/>
@@ -607,139 +607,119 @@
 
 
 
+    <div class="slide" id="css-preprocessors-technique-conversions"><div>
+   		<section>
+           <header>
+                <h2 class="title" style="color: black">Conversions pratiques</h2>
+           </header>
+           <em>Pixels vers Ems</em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
+font-size: (18px / $context) * 1em; // 1.125em
+           </code></pre>
+           <br/>
+           <em>Pixels vers pourcentages</em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
+$wraper_width: 1140px;
+.responsive-unit {
+   width: percentage(200px / $wraper_width);
+   margin: percentage(15px / $wrapper_width);
+}
+           </code></pre>
+
+        </section>
+   	</div></div>
 
 
-	<div class="slide" id="TwoLinesHeader"><div>
+
+    <div class="slide" id="css-preprocessors-technique-nesting"><div>
+   		<section>
+           <header>
+                <h2 class="title" style="color: black">Nesting et Media Queries</h2>
+           </header>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
+.menu-item {
+    display: inline-block;
+    @media screen and (max-width: 480px) {
+        display: block;
+    }
+}
+           </code></pre>
+           <br/>
+           <em>Sass 3.2 permet les blocks comme paramètres de mixins</em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
+.menu-item {
+    display: inline-block;
+    @include respond-to(small-screen) { display: block; }
+}
+           </code></pre>
+
+        </section>
+   	</div></div>
+
+
+    <div class="slide" id="css-preprocessors-technique-mobile-first-responsive"><div>
+   		<section>
+           <header>
+                <h2 class="title" style="color: black">Mobile-First Responsive Design</h2>
+           </header>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
+@import "base";
+@media (min-width:  480px) { @import  "480-up" }
+@media (min-width:  768px) { @import  "768-up" }
+@media (min-width: 1200px) { @import "1200-up" }
+           </code></pre>
+        </section>
+   	</div></div>
+
+
+    <div class="slide" id="css-preprocessors-technique-generating-color-palette"><div>
+   		<section>
+           <header>
+                <h2 class="title" style="color: black">Génération d'une palette de couleur</h2>
+           </header>
+           <div align="center">
+               <img src="pictures/palette-color.png" alt="" style="width: 55%;">
+           </div>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
+$base: #633;
+$complement1: adjust-hue($base, 180);
+$complement2: darken(adjust-hue($base, 180), 5%);
+$lighten1: lighten($base, 15%);
+$lighten2: lighten($base, 30%);
+           </code></pre>
+        </section>
+   	</div></div>
+
+
+    <div class="slide" id="css-preprocessors-technique-annotation-extend"><div>
+   		<section>
+           <header>
+                <h2 class="title" style="color: black">Utilisation de l'annotation @Extend</h2>
+           </header>
+<pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
+.button {
+    background: #00f;
+}
+
+.big-button {
+    @extend: .button;
+    width: 200px;
+}
+
+// ============= Sortie ============
+
+.button,
+.big-button { background: #00f }
+.big-button { width: 200px }
+</code></pre>
+        </section>
+   	</div></div>
+
+
+	<div class="slide" id="thank-you"><div>
 		<section>
 			<header>
-				<h2>Two rows.<br>Mighty heading</h2>
-			</header>
-			<p>This <code>&lt;tool&gt;</code> is provided <strong>without</strong> warranty, guarantee, or much in the way of explanation. Note that use of this tool may or may not crash <em>your</em> browser.</p>
-		</section>
-	</div></div>
-	<div class="slide" id="UnorderedList"><div>
-		<section>
-			<header>
-				<h2>Unordered List</h2>
-			</header>
-			<ul>
-				<li>This tool is provided</li>
-				<li>Without warranty, guarantee</li>
-				<li>Or much in the way of explanation
-					<ol>
-						<li>Note that use of this tool</li>
-						<li>May or may not crash your browser</li>
-						<li>Lock up your machine</li>
-					</ol>
-				</li>
-				<li>Erase your hard drive.</li>
-			</ul>
-		</section>
-	</div></div>
-	<div class="slide" id="OrderedList"><div>
-		<section>
-			<header>
-				<h2>Ordered List</h2>
-			</header>
-			<ol>
-				<li>Note that use of this tool</li>
-				<li>Erase your hard drive.</li>
-				<li>May or may not crash your browser
-					<ul>
-						<li>This tool is provided</li>
-						<li>Or much in the way of explanation</li>
-						<li>Without warranty, guarantee</li>
-					</ul>
-				</li>
-				<li>Lock up your machine</li>
-			</ol>
-		</section>
-	</div></div>
-	<div class="slide" id="InTheMiddle"><div>
-		<section>
-			<header>
-				<h2>In the Middle</h2>
-			</header>
-			<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 512 512" class="middle">
-				<path fill="#0174A7" d="m315 259l18-18 179 179v-36l-161-161 18-18 143 143v-36l-125-125 18-18 107 107v-225c0-28-23-51-51-51h-410c-28 0-51 23-51 51v410c0 28 23 51 51 51h191c17-25 14-59-8-81l-63-63-63-63c-55-55-55-145-0-199 55-55 144-55 199 0l9 7h109l-163 163v-107l-9-9c-25-25-66-25-91-0-25 25-25 66 0 91l63 63 63 63c37 37 49 89 37 135h136c28 0 51-23 51-51v-5l-197-197z"/>
-			</svg>
-		</section>
-	</div></div>
-	<div class="slide cover" id="FitToHeight"><div>
-		<section>
-			<header>
-				<h2>Fit to height</h2>
-			</header>
-			<img src="pictures/picture.jpg" alt="">
-		</section>
-	</div></div>
-	<div class="slide cover w" id="FitToWidth"><div>
-		<section>
-			<header>
-				<h2>Fit to width</h2>
-			</header>
-			<img src="pictures/picture.jpg" alt="">
-		</section>
-	</div></div>
-	<div class="slide" id="CodeSample"><div>
-		<section>
-			<header>
-				<h2>Code Sample</h2>
-			</header>
-			<pre>
-				<code>&lt;html lang="en-US"&gt;</code>
-				<code><mark>&lt;head&gt;</mark></code>
-				<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-				<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-				<code>    &lt;link rel="stylesheet" href="s/screen.css"&gt;</code>
-				<code>    &lt;script src="j/jquery.js"&gt;&lt;/script&gt;</code>
-				<code><mark>&lt;/head&gt;</mark></code>
-			</pre>
-		</section>
-	</div></div>
-	<div class="slide" id="CodeNotes"><div>
-		<section>
-			<header>
-				<h2>Code Notes</h2>
-			</header>
-			<pre>
-				<code><mark>&lt;html</mark> lang="en-US"&gt;</code>
-			</pre>
-			<p class="note">May or may not crash your browser</p>
-			<pre>
-				<code><mark>&lt;meta</mark> charset="<mark>UTF-8</mark>"&gt;</code>
-			</pre>
-			<p class="note">Lock up your machine</p>
-		</section>
-	</div></div>
-	<div class="slide shout" id="Shout"><div>
-		<section>
-			<header>
-				<h2>Warning<br>Message</h2>
-			</header>
-		</section>
-	</div></div>
-	<div class="slide shout" id="Demo"><div>
-		<section>
-			<header>
-				<h2><a href="examples/index.htm" target="_blank">Demo</a></h2>
-			</header>
-		</section>
-	</div></div>
-	<div class="slide" id="BlockQuote"><div>
-		<section>
-			<header>
-				<h2>Block Quote</h2>
-			</header>
-			<blockquote>
-				<p>This tool is provided without warranty, guarantee, or much in the way of explanation. Note that use of this tool may or may not crash your browser, lock up your machine, erase your hard drive.</p>
-			</blockquote>
-		</section>
-	</div></div>
-	<div class="slide" id="ThankYou"><div>
-		<section>
-			<header>
-				<h2>Shower Presentation Template</h2>
+				<h2>Merci !</h2>
 			</header>
 			<p>Alexis Kinsella, Xebia France</p>
 			<ul>
@@ -750,11 +730,23 @@
 			<p>Github: <a href="http://github.com/pepelsbey/shower">github.com/akinsella/sass-presentation</a></p>
 		</section>
 	</div></div>
-	<!--
-		To hide progress bar from entire presentation
-		just remove “progress” element.
-		-->
-	<div class="progress"><div></div></div>
+
+
+    <div class="slide" id="inpisred-from"><div>
+   		<section>
+   			<header>
+   				<h2>Copyrights</h2>
+   			</header>
+   			<p>Les slides originaux :</p>
+
+   			<ul>
+   				<li><a href="http://verekia.com/slides/css-preprocessors">Deep dive into CSS Preprocessors</a> par <a href="https://twitter.com/#!/verekia">Jonathan Verrecchia</a></li>
+                <li><a href="http://maddesigns.de/sass-compass-introduction/#1">Modern Frontend Development with Sass & Compass</a> par <a href="https://twitter.com/#!/maddesigns">Sven Wolfermann</a></li>
+   			</ul>
+   		</section>
+   	</div></div>
+
+
 	<script src="scripts/script.js"></script>
 	<!-- Copyright © 2010–2012 - Inspired from Vadim Makeev — pepelsbey.net -->
 	<!-- Photos by John Carey — fiftyfootshadows.net -->
