@@ -447,6 +447,7 @@
                      <h2 class="title" style="color: black">Sass - Le package de bienvenue</h2>
                 </header>
                <ul>
+                    <li>Sass signifie: Syntactically Awesome Style Sheets</li>
                     <li>2 syntaxes: .sass et .scss (CSS like)</li>
                     <li>Intégré avec <a href="https://github.com/jlong/sass-twitter-bootstrap">Twitter bootstrap</a> et ZURB Foundation</li>
                     <li>Plein de fonctionnalités "over the top": Extend, if, for, ...</li>
@@ -460,6 +461,49 @@
                 </ul>
    		</section>
    	</div></div>
+
+
+    <div class="slide w" id="css-preprocessor-choice-syntaxes"><div>
+   		<section>
+               <header>
+                     <h2 class="title" style="color: black">Sass ou Scss ?</h2>
+                </header>
+               <p>Sass a deux synthaxes :</p>
+               <ul>
+                   <li>La principale synthaxe est connue en tant que synthaxe : "Scss" pour "Sassy Css". Les fichiers utilisent l'extension ".scss"</li>
+                   <li>La seconde synthaxe est connue comme synthaxe indexée. Au lieu des acolades et points virgules, l'indentation des lignes permet de spécifier les blocks. L'extension utilsiée est ".sass"</li>
+               </ul>
+   		</section>
+   	</div></div>
+
+
+
+    <div class="slide" id="css-preprocessors-scss-and-sass"><div>
+   		<section>
+           <header>
+                <h2 class="title" style="color: black">Les synthaxes</h2>
+           </header>
+           <em>Scss</em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
+section {
+    margin: 1em 0;
+    header {
+        background-color: lightpink;
+    }
+}
+           </code></pre>
+           <br/>
+           <em>Sass</em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
+section
+    margin: 1em 0
+    header
+        background-color: lightpink;
+           </code></pre>
+
+        </section>
+   	</div></div>
+
 
 
     <div class="slide" id="css-preprocessor-choice-compass"><div>
@@ -520,6 +564,25 @@
 > gem install compass
 > compass create &lt;path&gt;
 > compass watch
+               </code></pre>
+
+   		</section>
+   	</div></div>
+
+    <div class="slide" id="css-preprocessor-choice-install-2"><div>
+   		<section>
+   			<header>
+   				<h2>Installation de betas et versions</h2>
+   			</header>
+               <em>Juste Sass : </em>
+               <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
+> sudo gem install sass --pre
+               </code></pre>
+
+
+               <em>Version - Vérifier la version installée : </em>
+               <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
+> sass --version
                </code></pre>
 
    		</section>
@@ -630,8 +693,34 @@ $wraper_width: 1140px;
    	</div></div>
 
 
-
     <div class="slide" id="css-preprocessors-technique-nesting"><div>
+   		<section>
+           <header>
+                <h2 class="title" style="color: black">Nesting</h2>
+           </header>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
+nav {
+ float: right;
+ li {
+   float: left;
+   a {
+     color: #666;
+     &:hover {
+       color: #333;
+     }
+   }
+   &.current {
+     font-weight: bold;
+   }
+ }
+}
+           </code></pre>
+
+        </section>
+   	</div></div>
+
+
+    <div class="slide" id="css-preprocessors-technique-nesting-2"><div>
    		<section>
            <header>
                 <h2 class="title" style="color: black">Nesting et Media Queries</h2>
@@ -655,6 +744,304 @@ $wraper_width: 1140px;
 
         </section>
    	</div></div>
+
+
+
+
+    <div class="slide" id="css-preprocessors-technique-ampersand"><div>
+   		<section>
+           <header>
+                <h2 class="title" style="color: black">Utilisation du "et commercial": &</h2>
+           </header>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
+div {
+    &:hover {
+        color: black;
+    }
+}
+           </code></pre>
+           <br/>
+           <em>en résulte: </em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 14px!important; line-height: 20px;">
+div:hover {
+    color: black;
+}
+           </code></pre>
+
+        </section>
+   	</div></div>
+
+
+
+    <div class="slide" id="css-preprocessors-technique-comments"><div>
+   		<section>
+           <header>
+                <h2 class="title" style="color: black">Usage des commentaires</h2>
+           </header>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 16px;">
+/* Commentaire multi-lignes qui apparaîtra dans le fichier résultant */
+.container {
+    color: black;
+}
+
+// Commentaire mono-ligne. Le contenu du commentaire n'apparaît pas dans la sortie
+footer {
+    color: #336699;
+}
+           </code></pre>
+           <em>Donne: </em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 16px;">
+/* Commentaire multi-lignes qui apparaîtra dans le fichier résultant */
+.container {
+   color: black;
+}
+
+footer {
+   color: #336699;
+}
+           </code></pre>
+
+        </section>
+   	</div></div>
+
+
+
+    <div class="slide" id="css-preprocessors-technique-mixins"><div>
+   		<section>
+           <header>
+                <h2 class="title" style="color: black">Mixins</h2>
+           </header>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 16px;">
+@mixin border-radius($value) {
+ -webkit-border-radius: $value;
+ -moz-border-radius: $value;
+ border-radius: $value;
+}
+.box {
+ color: $color-main;
+ @include border-radius(5px);
+}
+           </code></pre>
+           <em>Donne :</em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 16px;">
+.box {
+ color: blue;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ border-radius: 5px;
+}
+           </code></pre>
+        </section>
+   	</div></div>
+
+
+    <div class="slide" id="css-preprocessors-technique-import"><div>
+   		<section>
+           <header>
+                <h2 class="title" style="color: black">Imports</h2>
+           </header>
+           <em>En Css :</em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 16px;">
+/* style.css */
+@import "base.css";
+@import url("styles.css");
+@import url("druck.css") print;
+           </code></pre>
+           <em>En Sass :</em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 16px;">
+@import "modules/base";
+@import "partials/header", "partials/footer";
+           </code></pre>
+           <em style="font-size: 0.8em; line-height: 0.9em; padding-left: 50px;">
+               Création de sous dossiers, et division en 'partials'. Utilisation d'underscore dans les fichiers pour concaténer les 'partials' lors du process de compilation.
+           </em>
+        </section>
+   	</div></div>
+
+
+
+
+
+    <div class="slide" id="css-preprocessors-technique-function-operators"><div>
+   		<section>
+           <header>
+                <h2 class="title" style="color: black">Fonctions - Opérateurs</h2>
+           </header>
+           <em>Opérateurs relationnels: </em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 16px;">
+1 < 20 // true
+10 <= 20 // true
+4 > 1 // true
+4 >= 1 // true
+           </code></pre>
+           <em>Opérateurs de comparaison : </em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 16px;">
+1 + 1 == 2 // true
+small != big // true
+#000 == black // true
+           </code></pre>
+        </section>
+   	</div></div>
+
+
+    <div class="slide" id="css-preprocessors-technique-function-colors-rgb"><div>
+   		<section>
+           <header>
+                <h2 class="title" style="color: black">Fonctions - Couleurs</h2>
+           </header>
+           <em>RGB Functions: </em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 16px;">
+rgb($red, $green, $blue)
+rgba($red, $green, $blue, $alpha)
+rgba($color, $alpha)
+red($color)
+green($color)
+blue($color)
+mix($color-1, $color-2, [$weight])
+           </code></pre>
+        </section>
+   	</div></div>
+
+
+    <div class="slide" id="css-preprocessors-technique-function-colors-hsl"><div>
+   		<section>
+           <header>
+                <h2 class="title" style="color: black">Fonctions - Couleurs</h2>
+           </header>
+           <em>RGB Functions: </em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 16px;">
+hsl($hue, $saturation, $lightness)
+hsla($hue, $saturation, $lightness, $alpha)
+hue($color)
+saturation($color)
+lightness($color)
+adjust-hue($color, $degrees)
+lighten($color, $amount)
+darken($color, $amount)
+saturate($color, $amount)
+desaturate($color, $amount)
+grayscale($color)
+complement($color)
+invert($color)
+           </code></pre>
+        </section>
+   	</div></div>
+
+
+
+    <div class="slide" id="css-preprocessors-technique-function-color"><div>
+   		<section>
+           <header>
+                <h2 class="title" style="color: black">Fonctions - Opérateurs</h2>
+           </header>
+           <em>Fonctions d'opacité :</em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 16px;">
+alpha($color) / opacity($color)
+rgba($color, $alpha)
+opacify($color, $amount) / fade-in($color, $amount)
+transparentize($color, $amount) / fade-out($color, $amount)
+           </code></pre>
+           <em>Autres fonctions de couleur :</em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 16px;">
+adjust-color($color, [$red], [$green], [$blue], [$hue], [$saturation], [$lightness], [$alpha])
+scale-color($color, [$red], [$green], [$blue], [$saturation], [$lightness], [$alpha])
+change-color($color, [$red], [$green], [$blue], [$hue], [$saturation],
+           </code></pre>
+        </section>
+   	</div></div>
+
+
+
+    <div class="slide" id="css-preprocessors-technique-function-numbers"><div>
+   		<section>
+           <header>
+                <h2 class="title" style="color: black">Fonctions - Opérateurs</h2>
+           </header>
+           <em>Fonctions sur les nombres :</em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 16px;">
+percentage(13/25) // 52%
+round(2.4) // 2
+ceil(2.2) // 3
+floor(2.6) // 2
+abs(-24) // 24
+           </code></pre>
+           <em>Fonctions 'if' :</em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 16px;">
+$main-bg: #000;
+.main {
+ color: if($main-bg == black, #fff, #000);
+}
+           </code></pre>
+        </section>
+   	</div></div>
+
+
+
+    <div class="slide" id="css-preprocessors-technique-function-controls-directives"><div>
+   		<section>
+           <header>
+                <h2 class="title" style="color: black">Fonctions - Opérateurs</h2>
+           </header>
+           <em>@if, @for, @each, @while :</em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 16px;">
+$theme: ocean;
+div {
+    @if $theme == dusty {
+        background: #c6bba9;
+        color: $color;
+    } @else if $theme == ocean {
+    background: blue;
+        color: white;
+    }
+}
+           </code></pre>
+        </section>
+   	</div></div>
+
+
+
+    <div class="slide" id="css-preprocessors-technique-function-controls-for-loops"><div>
+   		<section>
+           <header>
+                <h2 class="title" style="color: black">@for loop</h2>
+           </header>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 16px;">
+@for $level from 0 to 3 {
+    .tag-#{$level + 1} {
+        font-size: .7em + ($level * .5em);
+    }
+}
+           </code></pre>
+           <em>Donne : </em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 16px;">
+.tag-1 { font-size: 0.7em; }
+.tag-2 { font-size: 1.2em; }
+.tag-3 { font-size: 1.7em; }
+            </code></pre>
+         </section>
+   	</div></div>
+
+
+
+    <div class="slide" id="css-preprocessors-technique-function"><div>
+   		<section>
+           <header>
+                <h2 class="title" style="color: black">Fonctions utilisateur</h2>
+           </header>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 16px;">
+@function grid-width($cells) {
+    @return ($cell-width + $cell-padding) * $cells;
+}
+           </code></pre>
+           <em>Fonction pour calculer les tailles de font Em en pixels : </em>
+           <pre class="prettyprint"><code class="language-css" style="font-size: 12px!important; line-height: 16px;">
+@function px2em($font_size, $base_font_size: 16) {
+    @return $font_size / $base_font_size + em
+}
+            </code></pre>
+         </section>
+   	</div></div>
+
 
 
     <div class="slide" id="css-preprocessors-technique-mobile-first-responsive"><div>
